@@ -1,4 +1,20 @@
 // VUE DIRECTIVE DEFINITION
+export const  VPrlx = {
+
+  // called when the bound element's parent component
+  // and all its children are mounted.
+  mounted(el) {
+    onBind(el)
+  },
+
+  updated(el) {
+    onBind(el)
+  },
+  // called when the parent component is unmounted
+  unmounted(el) {
+    onUnbind(el)
+  }
+}
 export default {
   bind: onBind,
 
